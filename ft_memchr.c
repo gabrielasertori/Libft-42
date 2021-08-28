@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/18 22:55:41 by gabriela          #+#    #+#             */
-/*   Updated: 2021/08/18 22:57:03 by gabriela         ###   ########.fr       */
+/*   Created: 2021/08/20 16:35:18 by gcosta-d          #+#    #+#             */
+/*   Updated: 2021/08/23 15:02:21 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_memchr(int	c)
+{
+	return (0);
+}

@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 22:55:51 by gabriela          #+#    #+#             */
-/*   Updated: 2021/08/18 22:56:57 by gabriela         ###   ########.fr       */
+/*   Updated: 2021/08/23 14:56:18 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_memmove(int	c)
+{
+	return (0);
+}

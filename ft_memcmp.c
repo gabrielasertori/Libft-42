@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/18 22:55:44 by gabriela          #+#    #+#             */
-/*   Updated: 2021/08/18 22:57:01 by gabriela         ###   ########.fr       */
+/*   Created: 2021/08/20 16:35:23 by gcosta-d          #+#    #+#             */
+/*   Updated: 2021/08/23 15:04:37 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_memcmp(int	c)
+{
+	return (0);
+}

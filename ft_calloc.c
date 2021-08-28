@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/18 22:55:20 by gabriela          #+#    #+#             */
-/*   Updated: 2021/08/18 22:57:20 by gabriela         ###   ########.fr       */
+/*   Created: 2021/08/20 16:34:31 by gcosta-d          #+#    #+#             */
+/*   Updated: 2021/08/23 15:00:58 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_calloc(int	c)
+{
+	return (0);
+}

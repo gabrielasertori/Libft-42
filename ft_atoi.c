@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/18 22:55:13 by gabriela          #+#    #+#             */
-/*   Updated: 2021/08/18 22:57:14 by gabriela         ###   ########.fr       */
+/*   Created: 2021/08/20 16:34:18 by gcosta-d          #+#    #+#             */
+/*   Updated: 2021/08/23 14:59:54 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_atoi(int	c)
+{
+	return (0);
+}

@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/18 22:55:35 by gabriela          #+#    #+#             */
-/*   Updated: 2021/08/18 22:57:05 by gabriela         ###   ########.fr       */
+/*   Created: 2021/08/20 16:35:13 by gcosta-d          #+#    #+#             */
+/*   Updated: 2021/08/25 13:50:40 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isprint(int	c)
+{
+	return (c >= 32 && c <= 126);
+}
