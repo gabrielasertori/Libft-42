@@ -6,9 +6,11 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:53 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/27 20:22:44 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/08/27 22:57:10 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 unsigned long	ft_strlcat(char	*dest, const char *src, unsigned long size)
 {

@@ -6,7 +6,7 @@
 #    By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/20 17:06:36 by gcosta-d          #+#    #+#              #
-#    Updated: 2021/08/27 20:03:57 by gcosta-d         ###   ########.fr        #
+#    Updated: 2021/08/27 23:01:30 by gcosta-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,3 +36,7 @@ fclean: clean
 re: fclean $(NAME)
 
 .PHONY: all clean fclean re
+
+main: main.c $(OBJ) $(NAME)
+	$(CC) -lbsd $(FLAGS) main.c $(NAME) -o main
+	./main

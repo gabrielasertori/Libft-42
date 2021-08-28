@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/27 23:05:38 by gcosta-d          #+#    #+#             */
+/*   Updated: 2021/08/28 15:14:32 by gcosta-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
@@ -17,6 +29,11 @@ void	ft_strlcat_test(void);
 void	ft_strncmp_test(void);
 void	ft_strchr_test(void);
 void	ft_strrchr_test(void);
+void	ft_memset_test(void);
+void	ft_bzero_test(void);
+void	ft_memcpy_test(void);
+void	ft_memmove_test(void);
+void	ft_memchr_test(void);
 
 int	main(void)
 {
@@ -58,6 +75,21 @@ int	main(void)
 
 	printf("\n=== ft_strrchr_test: ===\n");
 	ft_strrchr_test();
+
+	printf("\n=== ft_memset_test: ===\n");
+	ft_memset_test();
+
+	printf("\n=== ft_bzero_test: ===\n");
+	ft_bzero_test();
+
+	printf("\n=== ft_memcpy_test: ===\n");
+	ft_memcpy_test();
+
+	printf("\n=== ft_memmove_test: ===\n");
+	ft_memmove_test();
+
+	printf("\n=== ft_memchr_test: ===\n");
+	ft_memchr_test();
 	return (0);
 }
 
@@ -317,4 +349,89 @@ void	ft_strrchr_test(void)
 
 	printf("Where's the first occurence of 'c'? |%s|\n", result_original);
 	printf("Where's the first occurence of 'c'? |%s|\n", result_myfunc);
+}
+
+void	ft_memset_test(void)
+{
+	char	arr1[] = {'0', '1', '2'};
+	char	arr2[] = {'0', '1', '2'};
+
+	memset(arr1, 48, 3);
+	ft_memset(arr2, 48, 3);
+	printf("ORIGINAL: {%c, %c, %c}\n", arr1[0], arr1[1], arr1[2]);
+	printf("MY FUNC: {%c, %c, %c}\n", arr2[0], arr2[1], arr2[2]);
+}
+
+void	ft_bzero_test(void)
+{
+	char	arr1[] = {'0', '1', '2'};
+	char	arr2[] = {'0', '1', '2'};
+
+	bzero(arr1, 2);
+	ft_bzero(arr2, 2);
+	printf("ORIGINAL: {%c, %c, %c}\n", arr1[0], arr1[1], arr1[2]);
+	printf("MY FUNC: {%c, %c, %c}\n", arr2[0], arr2[1], arr2[2]);
+}
+
+void	ft_memcpy_test(void)
+{
+	char	arr1[] = {'A', 'B', 'C'};
+	char	arr2[] = {'0', '1', '2'};
+	char	str1[50] = "The cake is a lie! 42 is the answer";
+	char	str2[50] = "The cake is a lie! 42 is the answer";
+
+	memcpy(arr1, arr2, 2);
+	printf("ORIGINAL: {%c, %c, %c}\n", arr1[0], arr1[1], arr1[2]);
+	printf("ORIGINAL: {%c, %c, %c}\n", arr2[0], arr2[1], arr2[2]);
+	ft_memcpy(arr1, arr2, 2);
+	printf("MY FUNC: {%c, %c, %c}\n", arr1[0], arr1[1], arr1[2]);
+	printf("MY FUNC: {%c, %c, %c}\n", arr2[0], arr2[1], arr2[2]);
+
+    printf("String : |%s|\n", str1);
+    printf("Source: |%s|\n", str1);
+    printf("Dest: |%s|\n", str1 + 19);
+    memcpy(str1 + 19, str1 + 4, 18);
+    printf("ORIGINAL: |%s| Length: |%lu|\n", str1, strlen(str1));
+	ft_memcpy(str2 + 19, str2 + 4, 18);
+    printf("MY FUNC: |%s| Length: |%lu|\n", str2, strlen(str2));
+}
+
+void	ft_memmove_test(void)
+{
+	char	arr1[] = {'A', 'B', 'C'};
+	char	arr2[] = {'0', '1', '2'};
+	char	str1[50] = "The cake is a lie! 42 is the answer";
+	char	str2[50] = "The cake is a lie! 42 is the answer";
+
+	memmove(arr1, arr2, 2);
+	printf("ORIGINAL: {%c, %c, %c}\n", arr1[0], arr1[1], arr1[2]);
+	printf("ORIGINAL: {%c, %c, %c}\n", arr2[0], arr2[1], arr2[2]);
+	ft_memmove(arr1, arr2, 2);
+	printf("MY FUNC: {%c, %c, %c}\n", arr1[0], arr1[1], arr1[2]);
+	printf("MY FUNC: {%c, %c, %c}\n", arr2[0], arr2[1], arr2[2]);
+
+    printf("String : |%s|\n", str1);
+    printf("Source: |%s|\n", str1);
+    printf("Dest: |%s|\n", str1 + 19);
+    memmove(str1 + 19, str1 + 4, 18);
+    printf("ORIGINAL: |%s| Length: |%lu|\n", str1, strlen(str1));
+	ft_memmove(str2 + 19, str2 + 4, 18);
+    printf("MY FUNC: |%s| Length: |%lu|\n", str2, strlen(str2));
+}
+
+void	ft_memchr_test(void)
+{
+	char	arr1[] = {'A', 'B', 'C'};
+	char	str1[50] = "The cake is a lie! 42 is the answer";
+	char	*returned_original;
+	char	*returned_myfunc;
+
+	returned_original = memchr(str1, 'a', 10);
+	returned_myfunc = ft_memchr(str1, 'a', 10);
+	printf("ORIGINAL: |%s|\n", returned_original);
+	printf("MY FUNC: |%s|\n", returned_myfunc);
+	returned_original = memchr(arr1, 'a', 10);
+	returned_myfunc = ft_memchr(arr1, 'a', 10);
+	printf("ORIGINAL: |%s|\n", returned_original);
+	printf("MY FUNC: |%s|\n", returned_myfunc);
 }

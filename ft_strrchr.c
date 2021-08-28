@@ -6,11 +6,11 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:36:17 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/27 22:42:46 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/08/27 23:03:52 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	position;
 	int	i;

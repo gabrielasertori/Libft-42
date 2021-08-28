@@ -6,11 +6,21 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:34:24 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/23 15:00:14 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/08/28 00:03:28 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_bzero(int	c)
+void	ft_bzero(void	*s, unsigned long	n)
 {
-	return (0);
+	unsigned long	i;
+	char	*buff;
+
+	i = 0;
+	buff = s;
+
+	while (i < n)
+	{
+		buff[i] = 0;
+		i++;
+	}
 }

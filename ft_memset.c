@@ -6,11 +6,22 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:38 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/23 15:05:34 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/08/28 00:00:53 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memset(int	c)
+void	*ft_memset(void	*s, int	c, unsigned long	n)
 {
-	return (0);
+	unsigned long	i;
+	char	*buff;
+
+	i = 0;
+	buff = s;
+
+	while (i < n)
+	{
+		buff[i] = c;
+		i++;
+	}
+	return (s);
 }

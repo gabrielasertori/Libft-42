@@ -6,13 +6,13 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:36:03 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/25 13:54:51 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/08/27 23:06:26 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned long	ft_strlen(const char *s)
 {
-	unsigned long i;
+	unsigned long	i;
 
 	i = 0;
 	while (s[i] != '\0')
