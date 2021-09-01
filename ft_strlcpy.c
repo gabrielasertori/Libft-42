@@ -6,25 +6,27 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/27 23:04:51 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/08/30 21:21:27 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long	ft_strlcpy(char *dest, const char *src, unsigned long size)
-{
-	unsigned long	i;
-	unsigned long	j;
+#include "libft.h"
 
-	i = 0;
-	while (src[i] != '\0')
-		i++;
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	src_len;
+	size_t	j;
+
+	src_len = ft_strlen(src);
 	j = 0;
-	dest[j] = '\0';
-	while (j < size - 1 && j != i)
+	if (size != 0)
 	{
-		dest[j] = src[j];
-		dest[j + 1] = '\0';
-		j++;
+		while (j < size - 1 && j != src_len)
+		{
+			dest[j] = src[j];
+			j++;
+		}
+		dest[j] = 0;
 	}
-	return (i);
+	return (src_len);
 }

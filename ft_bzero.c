@@ -6,18 +6,19 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:34:24 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/28 00:03:28 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/08/29 20:06:18 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void	*s, unsigned long	n)
+#include "libft.h"
+
+void	ft_bzero(void	*s, size_t	n)
 {
-	unsigned long	i;
+	size_t	i;
 	char	*buff;
 
 	i = 0;
 	buff = s;
-
 	while (i < n)
 	{
 		buff[i] = 0;

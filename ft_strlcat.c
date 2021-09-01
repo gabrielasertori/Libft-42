@@ -6,44 +6,34 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:53 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/27 22:57:10 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/08/29 20:02:37 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long	ft_strlcat(char	*dest, const char *src, unsigned long size)
+size_t	ft_strlcat(char	*dest, const char *src, size_t size)
 {
-	unsigned long	dest_len;
-	unsigned long	src_len;
-	unsigned long	i;
-	unsigned long	j;
+	size_t	dest_len;
+	size_t	src_len;
+	size_t	i;
+	size_t	j;
 
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
-
-	if (size != 0 && size > dest_len)
+	i = 0;
+	j = dest_len;
+	if (dest_len < size - 1 && size > 0)
 	{
-		if (size <= dest_len + src_len)
-			return (dest_len + src_len);
-
-		if (size > dest_len && src_len < 1)
-			return (dest_len);
-
-		i = 0;
-		j = 0;
-		while (dest_len < size - 1 && src[i] != '\0')
+		while (src[i] != '\0' && dest_len + i < size - 1)
 		{
-			dest[j] += src[i];
-			i++;
+			dest[j] = src[i];
 			j++;
+			i++;
 			dest[j] = '\0';
 		}
-		return (j + i);
 	}
-
-	if (size == 0)
-		return (src_len);
-
-	return (src_len + size);
+	if (dest_len >= size)
+		dest_len = size;
+	return (dest_len + src_len);
 }

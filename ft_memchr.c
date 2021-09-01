@@ -6,22 +6,26 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:18 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/28 13:17:00 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/01 11:03:59 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void	*s, int	c, unsigned long	n)
-{
-	char	*buff;
-	unsigned long	i;
+#include "libft.h"
 
-	buff = s;
-	i = 0;
+void	*ft_memchr(const void	*s, int	c, size_t	n)
+{
+	unsigned char	*buff;
+	unsigned char	buff_c;
+	size_t			i;
+
+	buff = (unsigned char *)s;
+	buff_c = c;
 	if (n != 0)
 	{
-		while (buff[i] != '\0')
+		i = 0;
+		while (i < n)
 		{
-			if (buff[i] == c)
+			if (buff[i] == buff_c)
 				return ((char *)&buff[i]);
 			i++;
 		}

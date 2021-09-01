@@ -6,13 +6,15 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:36:03 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/27 23:06:26 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/08/28 15:39:42 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long	ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	unsigned long	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

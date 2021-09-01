@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 23:05:38 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/28 15:14:32 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/01 13:20:12 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <bsd/string.h>
+#include <stdlib.h>
 #include "libft.h"
 
 void	ft_isalpha_test(void);
@@ -34,6 +35,12 @@ void	ft_bzero_test(void);
 void	ft_memcpy_test(void);
 void	ft_memmove_test(void);
 void	ft_memchr_test(void);
+void	ft_memcmp_test(void);
+void	ft_strnstr_test(void);
+void	ft_atoi_test(void);
+void	ft_calloc_test(void);
+void	ft_strdup_test(void);
+void	ft_substr_test(void);
 
 int	main(void)
 {
@@ -90,6 +97,24 @@ int	main(void)
 
 	printf("\n=== ft_memchr_test: ===\n");
 	ft_memchr_test();
+
+	printf("\n=== ft_memcmp_test: ===\n");
+	ft_memcmp_test();
+
+	printf("\n=== ft_strnstr_test: ===\n");
+	ft_strnstr_test();
+
+	printf("\n=== ft_atoi_test: ===\n");
+	ft_atoi_test();
+
+	printf("\n=== ft_calloc_test: ===\n");
+	ft_calloc_test();
+
+	printf("\n=== ft_strdup_test: ===\n");
+	ft_strdup_test();
+
+	printf("\n=== ft_substr_test: ===\n");
+	ft_substr_test();
 	return (0);
 }
 
@@ -283,50 +308,49 @@ void	ft_tolower_test(void)
 
 void	ft_strlcpy_test(void)
 {
-	const char	*string = "123456789";
-	char	original_copied[10];
-	char	myfunc_copied[10];
+	char	src[] = "coucou";
+	char	dest[10] = "AAAAAAAAA";
+	char	mydest[10] = "AAAAAAAAAA";
 
-	strlcpy(original_copied, string, 11);
-	printf("ORIGINAL: %s |%lu|\n", original_copied, strlen(original_copied));
-	ft_strlcpy(myfunc_copied, string, 11);
-	printf("MY FUNCTION: %s |%lu|\n", myfunc_copied, strlen(myfunc_copied));
+	strlcpy(dest, src, 2);
+	printf("ORIGINAL: %c |%lu|\n", dest[2], strlen(dest));
+	ft_strlcpy(mydest, src, 2);
+	printf("MY FUNCTION: %c |%lu|\n", mydest[2], strlen(mydest));
 }
 
 void	ft_strlcat_test(void)
 {
-	char src[5] = "01";
-    char dst[10];
+	char src[5];
+    char dst[4] = "345";
+	char src2[5];
+    char dst2[4] = "345";
 
     char bufferSize = 3;
     char concatenatedString;
     char concatenatedStringOriginal;
 
     concatenatedString = ft_strlcat(dst, src, bufferSize);
-    concatenatedStringOriginal = strlcat(dst, src, bufferSize);
+    concatenatedStringOriginal = strlcat(dst2, src2, bufferSize);
 
     printf("MY FUNC: String |%s| Length |%lu| Returned: |%d|\n", dst, ft_strlen(dst), concatenatedString);
-    printf("ORIGINAL: String |%s| Length |%lu| Returned: |%d|\n", dst, strlen(dst), concatenatedStringOriginal);
+    printf("ORIGINAL: String |%s| Length |%lu| Returned: |%d|\n", dst2, strlen(dst2), concatenatedStringOriginal);
 
 }
 
 void	ft_strncmp_test(void)
 {
-	char str1[15];
-	char str2[15];
+	char str1[15] = "ABCD\0\0F";
+	char str2[15] = "ABCD\0EF";
 	int ret;
 
-	strcpy(str1, "ABCdEF");
-	strcpy(str2, "ABCDEF");
-
-	ret = strncmp(str1, str2, 4);
+	ret = ft_strncmp(str1, str2, 6);
 
 	if(ret < 0)
-		printf("str1 is less than str2 |%d|", ret);
+		printf("str1 is less than str2 |%d|\n", ret);
 	else if(ret > 0)
-		printf("str2 is less than str1 |%d|", ret);
+		printf("str2 is less than str1 |%d|\n", ret);
 	else
-		printf("str1 is equal to str2 |%d|", ret);
+		printf("str1 is equal to str2 |%d|\n", ret);
 }
 
 void	ft_strchr_test(void)
@@ -336,8 +360,8 @@ void	ft_strchr_test(void)
 	char *result_original = strchr(string, word);
 	char *result_myfunc = ft_strchr(string, word);
 
-	printf("Where's the first occurence of 'c'? |%s|\n", result_original);
-	printf("Where's the first occurence of 'c'? |%s|\n", result_myfunc);
+	printf("Where's the first occurence of '%c'? |%s|\n", word, result_original);
+	printf("Where's the first occurence of '%c'? |%s|\n", word, result_myfunc);
 }
 
 void	ft_strrchr_test(void)
@@ -430,8 +454,122 @@ void	ft_memchr_test(void)
 	returned_myfunc = ft_memchr(str1, 'a', 10);
 	printf("ORIGINAL: |%s|\n", returned_original);
 	printf("MY FUNC: |%s|\n", returned_myfunc);
-	returned_original = memchr(arr1, 'a', 10);
-	returned_myfunc = ft_memchr(arr1, 'a', 10);
+	returned_original = memchr(arr1, 'C', 2);
+	returned_myfunc = ft_memchr(arr1, 'C', 2);
 	printf("ORIGINAL: |%s|\n", returned_original);
 	printf("MY FUNC: |%s|\n", returned_myfunc);
+}
+
+void	ft_memcmp_test(void)
+{
+	char str1[6] = {1, 0, 0, 0, 0, 0};
+	char str2[6] = {1, 1, 1, 1, 1, 1};
+	//int ret;
+
+	//ret = memcmp(str1, str2, 4);
+
+	printf("str1 - str2 |%d|\n", memcmp(str1, str2, sizeof(int)*3));
+
+}
+
+void	ft_strnstr_test(void)
+{
+	char haystack[30] = "aaabcabcd";
+	char needle[10] = "aabc";
+	char * empty = (char*)"";
+
+	/* 1 */ printf("1. MY FUNC: |%s|\n", ft_strnstr(haystack, needle, 0));
+	/* 1 */ printf("1. ORIGINAL: |%s|\n\n", strnstr(haystack, needle, 0));
+	/* 2 */ printf("2. MY FUNC: |%s|\n", ft_strnstr(haystack, needle, -1));
+	/* 2 */ printf("2. ORIGINAL: |%s|\n\n", strnstr(haystack, needle, -1));
+	/* 3 */ printf("3. MY FUNC: |%s|\n", ft_strnstr(haystack, "a", -1));
+	/* 3 */ printf("3. ORIGINAL: |%s|\n\n", strnstr(haystack, "a", -1));
+	/* 4 */ printf("4. MY FUNC: |%s|\n", ft_strnstr(haystack, "c", -1));
+	/* 4 */ printf("4. ORIGINAL: |%s|\n\n", strnstr(haystack, "c", -1));
+	/* 5 */ printf("5. MY FUNC: |%s|\n", ft_strnstr(empty, "", -1));
+	/* 5 */ printf("5. ORIGINAL: |%s|\n\n", strnstr(empty, "", -1));
+	/* 6 */ printf("6. MY FUNC: |%s|\n", ft_strnstr(empty, "", 0));
+	/* 6 */ printf("6. ORIGINAL: |%s|\n\n", strnstr(empty, "", 0));
+	/* 7 */ printf("7. MY FUNC: |%s|\n", ft_strnstr(empty, "coucou", -1));
+	/* 7 */ printf("7. ORIGINAL: |%s|\n\n", strnstr(empty, "coucou", -1));
+	/* 8 */ printf("8. MY FUNC: |%s|\n", ft_strnstr(haystack, "aaabc", 5));
+	/* 8 */ printf("8. ORIGINAL: |%s|\n\n", strnstr(haystack, "aaabc", 5));
+	/* 9 */ printf("9. MY FUNC: |%s|\n", ft_strnstr(empty, "12345", 5));
+	/* 9 */ printf("9. ORIGINAL: |%s|\n\n", strnstr(empty, "12345", 5));
+	/* 10 */ printf("10. MY FUNC: |%s|\n", ft_strnstr(haystack, "abcd", 9));
+	/* 10 */ printf("10. ORIGINAL: |%s|\n\n", strnstr(haystack, "abcd", 9));
+	/* 11 */ printf("11. MY FUNC: |%s|\n", ft_strnstr(haystack, "cd", 8));
+	/* 11 */ printf("11. ORIGINAL: |%s|\n\n", strnstr(haystack, "cd", 8));
+	/* 12 mbueno-g */ printf("12. MY FUNC: |%s|\n", ft_strnstr(haystack, "a", 1));
+	/* 12 mbueno-g */ printf("12. ORIGINAL: |%s|\n\n", strnstr(haystack, "a", 1));
+}
+
+void	ft_atoi_test(void)
+{
+	int orig;
+	int my;
+    char *o;
+    char *m;
+
+    o = "\t -+--9885a";
+    m = "\t -+--9885a";
+    orig = atoi(o);
+    my = ft_atoi(m);
+
+    printf("ORIGINAL: %d\n", orig);
+    printf("MY FUNC: %d\n", my);
+}
+
+void	ft_calloc_test(void)
+{
+	int *ptr;
+	int  *ft_p;
+	int i;
+	int j;
+
+	ft_p = (int *)ft_calloc(2, 2);
+
+	ptr = (int *)calloc(2, 2);
+
+	i = 0;
+	while (i < 5)
+	{
+		printf("Endereço de p%i: %p | Valor de p%i: %i\n", i, (ptr + i), i, *(ptr + i));
+		i++;
+	}
+
+	j = 0;
+	while (j < 5)
+	{
+		printf("Endereço de ft_p%i: %p | Valor de ft_p%i: %i\n", j, (ft_p + j), j, *(ft_p + j));
+		j++;
+	}
+
+}
+
+void	ft_strdup_test(void)
+{
+	char	*string = "42 is the answer";
+
+	printf("%s\n", ft_strdup(string));
+}
+
+void	ft_substr_test(void)
+{
+	char	*s = "What goes around comes around";
+	//char * s1 = ft_substr("tripouille", 100, 1);
+	char *str = strdup("0123456789");
+	s = ft_substr(str, 9, 10);
+	char	*result1 = ft_substr(s, 17, 12);
+	char	*result2 = ft_substr(s, 0, 12);
+	char	*result3 = ft_substr(s, 17, 0);
+	char	*result4 = ft_substr(s, 0, 0);
+	char	*result5 = ft_substr(s, 17, 17);
+
+	printf("MY FUNC: |%s|\n", result1);
+	printf("MY FUNC: |%s|\n", result2);
+	printf("MY FUNC: |%s|\n", result3);
+	printf("MY FUNC: |%s|\n", result4);
+	printf("MY FUNC: |%s|\n", result5);
+	printf("MY FUNC: |%s|\n", s);
 }

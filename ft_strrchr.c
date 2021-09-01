@@ -6,24 +6,22 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:36:17 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/27 23:03:52 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/08/30 14:38:13 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-	int	position;
-	int	i;
+	int	s_len;
 
-	position = 0;
-	i = 0;
-	while (s[i] != '\0')
+	s_len = ft_strlen(s);
+	while (s_len >= 0)
 	{
-		if (s[i] == c)
-			position = i;
-		i++;
+		if (s[s_len] == (char)c)
+			return ((char *)&s[s_len]);
+		s_len--;
 	}
-	if (position == 0)
-		return (0);
-	return ((char *)&s[position]);
+	return (0);
 }
