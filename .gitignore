@@ -1,2 +1,4 @@
 libftTester
 .vscode
+main
+*.o
