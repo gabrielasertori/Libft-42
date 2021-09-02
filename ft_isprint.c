@@ -6,9 +6,11 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:13 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/25 13:50:40 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/02 00:42:46 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int	c)
 {

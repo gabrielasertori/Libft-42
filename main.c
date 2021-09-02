@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 23:05:38 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/01 13:20:12 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/01 15:15:40 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	ft_atoi_test(void);
 void	ft_calloc_test(void);
 void	ft_strdup_test(void);
 void	ft_substr_test(void);
+void	ft_strjoin_test(void);
 
 int	main(void)
 {
@@ -115,6 +116,9 @@ int	main(void)
 
 	printf("\n=== ft_substr_test: ===\n");
 	ft_substr_test();
+
+	printf("\n=== ft_strjoin_test: ===\n");
+	ft_strjoin_test();
 	return (0);
 }
 
@@ -556,20 +560,15 @@ void	ft_strdup_test(void)
 
 void	ft_substr_test(void)
 {
-	char	*s = "What goes around comes around";
-	//char * s1 = ft_substr("tripouille", 100, 1);
-	char *str = strdup("0123456789");
-	s = ft_substr(str, 9, 10);
-	char	*result1 = ft_substr(s, 17, 12);
-	char	*result2 = ft_substr(s, 0, 12);
-	char	*result3 = ft_substr(s, 17, 0);
-	char	*result4 = ft_substr(s, 0, 0);
-	char	*result5 = ft_substr(s, 17, 17);
+	char * s = ft_substr("tripouille", 0, 42000);
 
-	printf("MY FUNC: |%s|\n", result1);
-	printf("MY FUNC: |%s|\n", result2);
-	printf("MY FUNC: |%s|\n", result3);
-	printf("MY FUNC: |%s|\n", result4);
-	printf("MY FUNC: |%s|\n", result5);
 	printf("MY FUNC: |%s|\n", s);
+}
+
+void	ft_strjoin_test(void)
+{
+	char	*preffix = "code";
+	char	*suffix = "lei";
+
+	printf("%s\n", ft_strjoin(preffix, suffix));
 }

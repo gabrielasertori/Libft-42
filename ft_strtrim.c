@@ -6,11 +6,11 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:31 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/25 15:03:38 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/01 14:49:57 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strtrim(int	c)
+char	*ft_strtrim(char const	*s1, char const	*set)
 {
 	return (0);
 }
