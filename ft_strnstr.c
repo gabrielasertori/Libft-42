@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:36:12 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/30 17:11:21 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/02 21:35:06 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char	*s1, const char	*s2, size_t	n)
 {
-	int	i;
-	int	j;
-	int	s2_len;
+	size_t	i;
+	size_t	j;
+	size_t	s2_len;
 
 	i = 0;
 	s2_len = ft_strlen(s2);

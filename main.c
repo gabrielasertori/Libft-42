@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 23:05:38 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/01 15:15:40 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/03 14:10:52 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	ft_calloc_test(void);
 void	ft_strdup_test(void);
 void	ft_substr_test(void);
 void	ft_strjoin_test(void);
+void	ft_strtrim_test(void);
 
 int	main(void)
 {
@@ -119,6 +120,9 @@ int	main(void)
 
 	printf("\n=== ft_strjoin_test: ===\n");
 	ft_strjoin_test();
+
+	printf("\n=== ft_strtrim_test: ===\n");
+	ft_strtrim_test();
 	return (0);
 }
 
@@ -571,4 +575,11 @@ void	ft_strjoin_test(void)
 	char	*suffix = "lei";
 
 	printf("%s\n", ft_strjoin(preffix, suffix));
+}
+
+void	ft_strtrim_test(void)
+{
+	char	*string = " AEE AEE";
+	char	*set = " AE";
+	printf("Trim: |%s|\n", ft_strtrim(string, set));
 }
