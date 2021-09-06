@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:06 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/02 00:40:13 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/06 00:56:01 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const	*s1, char const	*s2)
 	s3 = malloc(s1_len + s2_len + 1);
 	i = 0;
 	if (!s3)
-		return (0);
+		return (NULL);
 	while (s1[i] != 0)
 	{
 		s3[i] = s1[i];

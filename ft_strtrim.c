@@ -6,20 +6,20 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:31 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/03 14:13:18 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/03 14:17:06 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 static int	find_first_pattern(char const	*string, char const *pattern);
 static int	find_last_pattern(char const	*str, char const	*pattern);
 
 char	*ft_strtrim(char const	*s1, char const	*set)
 {
-	int	first_s1;
-	int	last_s1;
-	char	*copy;
+	int				first_s1;
+	int				last_s1;
+	char			*copy;
 	unsigned int	s1_len;
 
 	s1_len = ft_strlen(s1);

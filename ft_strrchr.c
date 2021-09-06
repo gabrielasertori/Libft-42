@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:36:17 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/30 14:38:13 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/06 00:56:39 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)&s[s_len]);
 		s_len--;
 	}
-	return (0);
+	return (NULL);
 }

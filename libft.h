@@ -6,13 +6,14 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:32:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/01 15:07:41 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/06 17:17:33 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_atoi(const char	*nptr);
 void	ft_bzero(void	*s, size_t	n);
@@ -37,15 +38,15 @@ char	*ft_strnstr(const char	*s1, const char	*s2, size_t	n);
 char	*ft_strrchr(const char	*s, int	c);
 int		ft_tolower(int	c);
 int		ft_toupper(int	c);
-int		ft_itoa(int	c);
-int		ft_putchar_fd(int	c);
-int		ft_putendl_fd(int	c);
-int		ft_putnbr_fd(int	c);
-int		ft_putstr_fd(int	c);
-int		ft_split(int	c);
-int		ft_striteri(int	c);
+char	*ft_itoa(int	n);
+void	ft_putchar_fd(char	c, int	fd);
+void	ft_putendl_fd(char	*s, int	fd);
+void	ft_putnbr_fd(int	n, int	fd);
+void	ft_putstr_fd(char	*s, int	fd);
+char	**ft_split(char const	*s, char	c);
+void	ft_striteri(char	*s, void	(*f)(unsigned int, char*));
 char	*ft_strjoin(char const	*s1, char const	*s2);
-int		ft_strmapi(int	c);
+char	*ft_strmapi(char const	*s, char	(*f)(unsigned int, char));
 char	*ft_strtrim(char const	*s1, char const	*set);
 char	*ft_substr(char const	*s, unsigned int	start, size_t	len);
 

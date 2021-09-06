@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:18 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/01 11:03:59 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/06 00:54:08 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void	*ft_memchr(const void	*s, int	c, size_t	n)
 			i++;
 		}
 	}
-	return (0);
+	return (NULL);
 }

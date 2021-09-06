@@ -6,11 +6,19 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:01:43 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/25 15:02:01 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/06 01:44:04 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_putendl_fd(int	c)
+#include	"libft.h"
+#include	<unistd.h>
+
+void	ft_putendl_fd(char	*s, int	fd)
 {
-	return (0);
+	while (*s != 0)
+	{
+		write (fd, s, 1);
+		s++;
+	}
+	write (fd, "\n", 1);
 }

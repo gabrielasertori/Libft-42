@@ -6,11 +6,18 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:02:26 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/25 15:02:37 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/06 01:41:25 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_putstr_fd(int	c)
+#include	"libft.h"
+#include	<unistd.h>
+
+void	ft_putstr_fd(char	*s, int	fd)
 {
-	return (0);
+	while (*s != 0)
+	{
+		write (fd, s, 1);
+		s++;
+	}
 }

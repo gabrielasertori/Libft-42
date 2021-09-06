@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 22:55:51 by gabriela          #+#    #+#             */
-/*   Updated: 2021/09/01 12:43:14 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/06 00:54:31 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memmove(void	*dest, const void	*src, size_t	n)
 	buff_dest = (char *)dest;
 	buff_src = (char *)src;
 	if (buff_dest == 0 && buff_src == 0)
-		return (0);
+		return (NULL);
 	while (i < n)
 	{
 		buff_tmp[i] = buff_src[i];

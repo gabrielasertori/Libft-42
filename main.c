@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 23:05:38 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/03 14:10:52 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/06 01:35:30 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ void	ft_strdup_test(void);
 void	ft_substr_test(void);
 void	ft_strjoin_test(void);
 void	ft_strtrim_test(void);
+void	ft_split_test(void);
+void	ft_itoa_test(void);
 
 int	main(void)
 {
@@ -123,6 +125,12 @@ int	main(void)
 
 	printf("\n=== ft_strtrim_test: ===\n");
 	ft_strtrim_test();
+
+	printf("\n=== ft_split_test: ===\n");
+	ft_split_test();
+
+	printf("\n=== ft_itoa_test: ===\n");
+	ft_itoa_test();
 	return (0);
 }
 
@@ -583,3 +591,19 @@ void	ft_strtrim_test(void)
 	char	*set = " AE";
 	printf("Trim: |%s|\n", ft_strtrim(string, set));
 }
+
+void	ft_split_test(void)
+{
+	char **array = ft_split("chinimala", ' ');
+	printf("strings: %s | %s\n", array[0], array[1]);
+}
+
+void	ft_itoa_test(void)
+{
+	printf("Int min: %s\n", ft_itoa(-2147483648));
+	printf("Int max: %s\n", ft_itoa(2147483647));
+	printf("Zero: %s\n", ft_itoa(0));
+	printf("Positive: %s\n", ft_itoa(1));
+	printf("Negative : %s\n", ft_itoa(-1));
+}
+
