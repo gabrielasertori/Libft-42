@@ -6,11 +6,16 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:18 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/06 00:54:08 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/07 11:53:09 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*	Memchr function return a pointer to the first occourence
+ *	of c in n bytes. We need to cast the variables to the same
+ *	type to make comparissons.
+ */
 
 void	*ft_memchr(const void	*s, int	c, size_t	n)
 {

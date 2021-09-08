@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 16:35:44 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/07 12:04:26 by gcosta-d         ###   ########.fr       */
+/*   Created: 2021/09/07 20:08:59 by gcosta-d          #+#    #+#             */
+/*   Updated: 2021/09/07 20:31:24 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-/*	Strchr return the first occourence of c
- *	in a given string. Null if didn't exists.
- */
-
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstnew(void	*content)
 {
-	int	s_len;
+	t_list	*new;
 
-	s_len = ft_strlen(s);
-	while (s_len >= 0)
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
-		s_len--;
-	}
-	return (NULL);
+	new = malloc(sizeof(t_list));
+	if (!content)
+		return (NULL);
+	new -> content = content;
+	new -> next = NULL;
+	return (new);
 }

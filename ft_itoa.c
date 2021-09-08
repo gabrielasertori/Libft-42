@@ -6,11 +6,17 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:00:55 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/05 20:39:32 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 11:41:49 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*	Itoa transform an integer argument in char.
+ *	The return value is the pointer to the first memory
+ *	that was transformated. The get_len function count
+ *	the amount of algarisms in n to allocate memory.
+ */
 
 static int	get_len(int	nbr);
 

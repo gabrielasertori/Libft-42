@@ -6,11 +6,15 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:38 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/29 20:03:22 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/07 11:52:59 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*	Memset put in n memories a passing integer and return
+ *	a pointer to the first memory area passed.
+ */
 
 void	*ft_memset(void	*s, int	c, size_t	n)
 {

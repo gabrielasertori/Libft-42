@@ -6,11 +6,15 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:27 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/06 00:54:38 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/07 11:49:45 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*	Memcpy copies n memory area to another and return a pointer
+ *	to the destinated area.
+ */
 
 void	*ft_memcpy(void	*dest, const void	*src, size_t	n)
 {

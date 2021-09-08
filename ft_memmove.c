@@ -6,11 +6,15 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 22:55:51 by gabriela          #+#    #+#             */
-/*   Updated: 2021/09/06 00:54:31 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/07 11:51:16 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*	Memmove moves n memory area to another (unlike memcpy,
+ *	in this function the content may overwrite).
+ */
 
 void	*ft_memmove(void	*dest, const void	*src, size_t	n)
 {

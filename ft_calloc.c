@@ -6,11 +6,17 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:34:31 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/06 00:55:33 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/07 11:33:25 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 	Calloc allocates an amount of bytes and put 0s inside.
+ *	The return value is the pointer to the first allocated memory.
+ *	p iterate the string and reaches the end of the alocated bytes
+ *	putting 0 inside it. Than, pointer return the first memory.
+ */
 
 void	*ft_calloc(size_t	nbr, size_t	size)
 {

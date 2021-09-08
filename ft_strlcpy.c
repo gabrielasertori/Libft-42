@@ -6,11 +6,16 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/30 21:21:27 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:08:54 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*	Strlcpy copies size memories from src to dest string
+ *	and returns the length of source. The size passed count
+ *	with the null terminator.
+ */
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

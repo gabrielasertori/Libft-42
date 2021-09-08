@@ -6,11 +6,20 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:02:42 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/06 17:25:24 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:03:03 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*	Split takes up a string and split it in many strings
+ *	depending on the delimiter character. The function
+ *	returns an array of strings. The str_in_array count
+ *	how many pointer to strings is needed to allocate.
+ *	The function itself reaches the first char that isn't
+ *	the delimiter, allocate memory and than copy the content
+ *	of the string to inside the array at that index.
+ */
 
 static int	str_in_array(const char *s, char delimiter);
 
