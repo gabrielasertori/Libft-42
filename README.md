@@ -3,11 +3,7 @@
 		<img src=".img/42logo.svg" alt="ecole42" width="300"/>
 	</p>
 </div>
-<div>
-	<p align="center">
-		[![libft-badge](https://img.shields.io/badge/<libft>-<completed>-<green>.svg)](https://shields.io/)
-	<p>
-</div>
+
 
 # 42 Cursus - Libft
 :rocket: Our first library in c!
@@ -15,8 +11,8 @@
 ---
 
 ## Sumary
-[Makefile](##let's-make-it-right!)
-[Descriptives](##descriptives)
+[Makefile](##let's-make-it-right!) \
+[Descriptives](##descriptives) \
 [Helpfull links](##helpfull-links)
 
 ---
