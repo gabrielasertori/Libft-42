@@ -19,9 +19,9 @@
 
 
 ## Sumary
-[Makefile](let's-make-it-right!) \
-[Descriptives](descriptives) \
-[Helpfull links](helpfull-links)
+[Makefile](##let's-make-it-right!) \
+[Descriptives](##descriptives) \
+[Helpfull links](##helpfull-links)
 
 
 
