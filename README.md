@@ -5,21 +5,25 @@
 </div>
 <div>
 	<p align="center">
-		[![libft-badge](https://img.shields.io/badge/<libft>-<completed>-<green>.svg)](https://shields.io/)
-	<p>
+		<a href="https://www.linkedin.com/in/gabriela-sertori-50b390189/">
+			<img alt="Gabriela Sertori" src="https://img.shields.io/badge/-gabisertori-7ae9c6?style=flat&logo=Linkedin&logoColor=5a5a5a" />
+		</a>
+		<a aria-label="Completed" href="https://www.42sp.org.br/">
+			<img src="https://img.shields.io/badge/libft-completed-7ae9c6?logo="></img>
+		</a>
+	</p>
 </div>
 
 # 42 Cursus - Libft
 :rocket: Our first library in c!
 
----
 
 ## Sumary
-[Makefile](##let's-make-it-right!)
-[Descriptives](##descriptives)
+[Makefile](##let's-make-it-right!) \
+[Descriptives](##descriptives) \
 [Helpfull links](##helpfull-links)
 
----
+
 
 ## Let's make it right!
 So, let's begin with Makefile, huh?

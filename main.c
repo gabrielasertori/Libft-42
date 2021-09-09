@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 23:05:38 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/09 12:42:01 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/09 20:37:38 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -676,5 +676,5 @@ void	ft_lstlast_test(void)
 	ft_lstadd_back(&meu, nao);
 	ft_lstadd_back(&meu, johnny);
 
-	printf("|%s| last element\n", (char*)ft_lstlast(meu));
+	printf("|%s| last element\n", ft_lstlast(meu)->content);
 }
