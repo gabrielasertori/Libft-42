@@ -6,7 +6,7 @@
 #    By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 11:37:22 by gcosta-d          #+#    #+#              #
-#    Updated: 2021/09/08 11:37:25 by gcosta-d         ###   ########.fr        #
+#    Updated: 2021/09/09 15:53:47 by gcosta-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,21 +21,27 @@ SOURCE = ft_isalnum.c ft_isprint.c ft_memcmp.c ft_putchar_fd.c ft_split.c \
 			ft_toupper.c ft_calloc.c ft_isdigit.c ft_memchr.c ft_memset.c  \
 			ft_putstr_fd.c ft_strjoin.c ft_strmapi.c ft_strtrim.c ft_striteri.c
 OBJ = $(SOURCE:.c=.o)
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstsize.c \
+			ft_lstlast.c
+B_OBJ = $(BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
+bonus: $(NAME) $(B_OBJ)
+	ar -rcs $(NAME) $(B_OBJ)
+
 clean:
-	rm -f $(OBJ).o
+	rm -f $(OBJ).o $(B_OBJ).o
 
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean $(NAME)
+re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re main bonus
 
 main: main.c $(OBJ) $(NAME)
 	$(CC) -lbsd $(FLAGS) main.c $(NAME) -o main

@@ -6,15 +6,14 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:48 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/08 11:41:04 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 17:41:21 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*	This function dupplicates whatever string
- *	that is passed. And return a pointer to
- *	copied string.
+/* This function dupplicates the string that is passed.
+ * And return a pointer to the copied string.
  */
 
 char	*ft_strdup(const char	*s)

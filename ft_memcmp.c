@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:23 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/07 11:47:47 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 17:34:19 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*	Memcmp function compares byte a byte if the value of a memory
  *	area is bigger, smaller or equal to the second area passed.
- *	The return value is the difference when the first diferent area
+ *	The return value is the difference when the first different area
  *	is encountered.
  */
 

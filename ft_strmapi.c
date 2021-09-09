@@ -6,11 +6,13 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:17 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/06 17:19:58 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 17:54:52 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* This function applies a callback function while iterating the string */
 
 char	*ft_strmapi(char const	*s, char	(*f)(unsigned int, char))
 {

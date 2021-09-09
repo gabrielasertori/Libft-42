@@ -6,9 +6,16 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:34:18 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/02 01:01:01 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 17:29:02 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* This function transform some kind of string in integers.
+ * The rules are: the string may have any space characters,
+ * the space characters may be followed by a symbol (+ or -),
+ * the only chars that can be transformed are number,
+ * if other ascii thing was encountered, the function stops
+ * and return an integer transformed.*/
 
 int	ft_atoi(const char	*nptr)
 {

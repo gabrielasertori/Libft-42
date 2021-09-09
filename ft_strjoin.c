@@ -6,11 +6,15 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:06 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/06 00:56:01 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 17:46:08 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* Strjoin concatenate two string in one and return a pointer
+ * to the new string.
+ */
 
 char	*ft_strjoin(char const	*s1, char const	*s2)
 {

@@ -6,39 +6,38 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 22:55:51 by gabriela          #+#    #+#             */
-/*   Updated: 2021/09/07 11:51:16 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 17:39:02 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*	Memmove moves n memory area to another (unlike memcpy,
- *	in this function the content may overwrite).
+/* Memmove moves n memory area to another (unlike memcpy,
+ * in this function the content may overwrite).
+ * If dest address is further than src address, we need
+ * to make sure them not overflow.
  */
 
 void	*ft_memmove(void	*dest, const void	*src, size_t	n)
 {
-	size_t	i;
-	size_t	j;
 	char	*buff_dest;
 	char	*buff_src;
-	char	buff_tmp[n];
+	char	*buff_tmp;
 
-	i = 0;
-	j = 0;
 	buff_dest = (char *)dest;
 	buff_src = (char *)src;
-	if (buff_dest == 0 && buff_src == 0)
-		return (NULL);
-	while (i < n)
+	buff_tmp = buff_src;
+	if (!buff_dest || !buff_src || !n)
+		return (dest);
+	if (buff_dest > buff_src)
 	{
-		buff_tmp[i] = buff_src[i];
-		i++;
+		while (n--)
+			buff_dest[n] = buff_src[n];
 	}
-	while (j < n)
+	else
 	{
-		buff_dest[j] = buff_tmp[j];
-		j++;
+		ft_memcpy(buff_tmp, buff_src, n);
+		ft_memcpy(buff_dest, buff_tmp, n);
 	}
-	return (dest);
+	return (buff_dest);
 }

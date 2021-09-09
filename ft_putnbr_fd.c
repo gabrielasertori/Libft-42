@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:02:06 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/07 11:57:48 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 17:39:50 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  *	This is a recursive function. That means that many putnbr
  *	functions will be called until n be less than 10 (one algarism).
  *	When the last one was finished, all the functions that couldn't
- *	finish will continuate untill the first one.
+ *	finish will continue untill the first one.
  */
 
 void	ft_putnbr_fd(int	n, int	fd)

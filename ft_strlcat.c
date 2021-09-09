@@ -6,11 +6,19 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:53 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/29 20:02:37 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 17:52:29 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* Strlcat concatenate (n bytes) from source to the end of dest.
+ * The return value is the length of the final string.
+ * size means the total lenght of the string, including the
+ * size of dest.
+ * If dest lenght was bigger than the size, the length of dest
+ * should be equal to size and don't concatenate.
+ */
 
 size_t	ft_strlcat(char	*dest, const char *src, size_t size)
 {

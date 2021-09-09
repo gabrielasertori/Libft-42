@@ -6,13 +6,15 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:34:24 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/07 11:27:33 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 17:30:35 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*The string need to be other than void to iterate*/
+/* The string need to be different from void to iterate.
+ * bzero put 0s in n bytes.
+ */
 
 void	ft_bzero(void	*s, size_t	n)
 {

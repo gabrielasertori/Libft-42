@@ -6,11 +6,19 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:45 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/02 00:41:41 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 18:27:02 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
+
+/* Substr return a pointer to a copy string from the big string
+ * len bytes and counting with the start index.
+ * If len was 0 or the start index was bigger than the string
+ * the function have to return a void string.
+ * If only len was bigger than the string, the copy will return
+ * all content of the source string.
+ */
 
 char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 {
@@ -27,7 +35,7 @@ char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 		ft_strlcpy(copy, s, len + 1);
 		return (copy);
 	}
-	if ((start + len) > s_len)
+	if ((start + len) > s_len && len > start)
 	{
 		copy = (char *) ft_calloc(len - start + 1, sizeof(char));
 		ft_strlcpy(copy, s + start, len + 1);

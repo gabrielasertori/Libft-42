@@ -1,5 +1,6 @@
 {
 	"files.associations": {
-		"bit": "c"
+		"bit": "c",
+		"libft.h": "c"
 	}
 }

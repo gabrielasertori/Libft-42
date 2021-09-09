@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 23:05:38 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/06 01:35:30 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:42:01 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,12 @@ void	ft_strjoin_test(void);
 void	ft_strtrim_test(void);
 void	ft_split_test(void);
 void	ft_itoa_test(void);
+
+void	ft_lstnew_test(void);
+void	ft_lstadd_back_test(void);
+void	ft_lstsize_test(void);
+void	ft_lstlast_test(void);
+
 
 int	main(void)
 {
@@ -131,6 +137,18 @@ int	main(void)
 
 	printf("\n=== ft_itoa_test: ===\n");
 	ft_itoa_test();
+
+	printf("\n=== ft_lstnew_test: ===\n");
+	ft_lstnew_test();
+
+	printf("\n=== ft_lstadd_back_test: ===\n");
+	ft_lstadd_back_test();
+
+	printf("\n=== ft_lstsize_test: ===\n");
+	ft_lstsize_test();
+
+	printf("\n=== ft_lstlast_test: ===\n");
+	ft_lstlast_test();
 	return (0);
 }
 
@@ -607,3 +625,56 @@ void	ft_itoa_test(void)
 	printf("Negative : %s\n", ft_itoa(-1));
 }
 
+void	ft_lstnew_test(void)
+{
+	t_list *new;
+
+	new = ft_lstnew("42");
+	printf("%s\n", new->content);
+}
+
+void	ft_lstadd_back_test(void)
+{
+	t_list *meu = ft_lstnew("Meu");
+	t_list *nome = ft_lstnew("nome");
+	t_list *nao = ft_lstnew("não é");
+	t_list *johnny = ft_lstnew("Johnny");
+
+	ft_lstadd_back(&meu, nome);
+	ft_lstadd_back(&meu, nao);
+	ft_lstadd_back(&meu, johnny);
+
+	while (meu)
+	{
+		printf("lista: %s\n", meu->content);
+		meu = meu->next;
+	}
+}
+
+void	ft_lstsize_test(void)
+{
+	t_list *meu = ft_lstnew("Meu");
+	t_list *nome = ft_lstnew("nome");
+	t_list *nao = ft_lstnew("não é");
+	t_list *johnny = ft_lstnew("Johnny");
+
+	ft_lstadd_back(&meu, nome);
+	ft_lstadd_back(&meu, nao);
+	ft_lstadd_back(&meu, johnny);
+
+	printf("|%d| list elements\n", ft_lstsize(meu));
+}
+
+void	ft_lstlast_test(void)
+{
+	t_list *meu = ft_lstnew("Meu");
+	t_list *nome = ft_lstnew("nome");
+	t_list *nao = ft_lstnew("não é");
+	t_list *johnny = ft_lstnew("Johnny");
+
+	ft_lstadd_back(&meu, nome);
+	ft_lstadd_back(&meu, nao);
+	ft_lstadd_back(&meu, johnny);
+
+	printf("|%s| last element\n", (char*)ft_lstlast(meu));
+}

@@ -6,11 +6,16 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:36:12 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/06 00:56:28 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/08 18:00:44 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* Strnstr finds if there is a little string in a big string.
+ * The comparissons must be done until find the little string,
+ * or until little string fits into the last bytes of big string.
+ */
 
 char	*ft_strnstr(const char	*s1, const char	*s2, size_t	n)
 {
