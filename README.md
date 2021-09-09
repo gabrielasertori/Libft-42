@@ -3,7 +3,16 @@
 		<img src=".img/42logo.svg" alt="ecole42" width="300"/>
 	</p>
 </div>
-
+<div>
+	<p align="center">
+		<a href="https://www.linkedin.com/in/gabriela-sertori-50b390189/">
+			<img alt="Gabriela Sertori" src="https://img.shields.io/badge/-gabisertori-7ae9c6?style=flat&logo=Linkedin&logoColor=5a5a5a" />
+		</a>
+		<a aria-label="Completed" href="https://www.42sp.org.br/">
+			<img src="https://img.shields.io/badge/libft-completed-7ae9c6?logo="></img>
+		</a>
+	</p>
+</div>
 
 # 42 Cursus - Libft
 :rocket: Our first library in c!
