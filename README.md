@@ -1,3 +1,14 @@
+<div>
+	<p align="center">
+		<img src=".img/42logo.svg" alt="ecole42" width="300"/>
+	</p>
+</div>
+<div>
+	<p align="center">
+		[![libft-badge](https://img.shields.io/badge/<libft>-<completed>-<green>.svg)](https://shields.io/)
+	<p>
+</div>
+
 # 42 Cursus - Libft
 :rocket: Our first library in c!
 
