@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:45 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/08 18:27:02 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/11 21:30:50 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,11 @@ char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 	s_len = ft_strlen(s);
 	if (start > s_len || len <= 0)
 		return (ft_strdup(""));
-	if (len > s_len)
+	if ((start + len) > s_len)
 	{
-		copy = (char *) ft_calloc((s_len + 1), sizeof(char));
-		ft_strlcpy(copy, s, len + 1);
-		return (copy);
-	}
-	if ((start + len) > s_len && len > start)
-	{
-		copy = (char *) ft_calloc(len - start + 1, sizeof(char));
+		copy = (char *) ft_calloc(s_len - start + 1, sizeof(char));
+		if (!copy)
+			return (NULL);
 		ft_strlcpy(copy, s + start, len + 1);
 		return (copy);
 	}
@@ -45,6 +41,8 @@ char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 	while (i < start)
 		i++;
 	copy = (char *) ft_calloc(len + 1, sizeof(char));
+	if (!copy)
+		return (NULL);
 	ft_strlcpy(copy, s + start, len + 1);
 	return (copy);
 }

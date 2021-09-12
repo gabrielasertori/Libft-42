@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:17 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/08 17:54:52 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/11 20:41:34 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strmapi(char const	*s, char	(*f)(unsigned int, char))
 
 	i = 0;
 	str = (char *) ft_calloc(ft_strlen(s) + 1, sizeof(char));
+	if (!str)
+		return (NULL);
 	while (s[i])
 	{
 		str[i] = f(i, s[i]);

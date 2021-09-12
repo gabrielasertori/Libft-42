@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 12:22:18 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/09 21:12:06 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/11 21:34:46 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_lstsize(t_list	*lst)
 
 	i = 1;
 	if (!lst)
-		return (NULL);
+		return (0);
 	while (lst->next)
 	{
 		lst = lst->next;

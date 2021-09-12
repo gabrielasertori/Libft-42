@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:00:55 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/08 17:33:25 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/11 20:41:03 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
  */
 
 static int	get_len(int	nbr);
+static char	*get_digit(int	n, int	n_len, char	*str);
 
 char	*ft_itoa(int	n)
 {
@@ -28,24 +29,21 @@ char	*ft_itoa(int	n)
 
 	n_len = get_len(n);
 	str = (char *) ft_calloc(n_len + 1, sizeof(char));
+	if (!str)
+		return (NULL);
 	if (n == 0)
 		*str = n / 10 + '0';
-	if (n < 0)
+	else if (n < 0)
 	{
 		if (n == -2147483648)
 		{
 			ft_strlcpy(str, "-2147483648", n_len + 1);
 			return (str);
 		}
-		n *= -1;
 		str[0] = '-';
+		n *= -1;
 	}
-	while (n != 0)
-	{
-		n1 = n % 10;
-		*(str + --n_len) = n1 + '0';
-		n = n / 10;
-	}
+	str = get_digit(n, n_len, str);
 	return (str);
 }
 
@@ -62,4 +60,19 @@ static int	get_len(int	nbr)
 		nbr_len++;
 	}
 	return (nbr_len);
+}
+
+static char	*get_digit(int	n, int	n_len, char	*str)
+{
+	int	n1;
+
+	n1 = 0;
+	while (n != 0)
+	{
+		n_len--;
+		n1 = n % 10;
+		*(str + n_len) = n1 + '0';
+		n = n / 10;
+	}
+	return (str);
 }

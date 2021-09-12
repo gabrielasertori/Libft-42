@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:02:42 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/07 12:03:03 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/11 20:16:04 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,27 +26,27 @@ static int	str_in_array(const char *s, char delimiter);
 char	**ft_split(char const	*s, char	c)
 {
 	char			**arr;
-	unsigned int	i;
 	unsigned int	j;
 	unsigned int	a;
 
 	arr = (char **) ft_calloc(str_in_array(s, c) + 1, sizeof(char *));
-	i = 0;
+	if (!arr)
+		return (NULL);
 	a = -1;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == c)
-			i++;
+		if (*s == c)
+			s++;
 		else
 		{
 			j = 0;
-			while (s[i] != c && s[i])
+			while (*s != c && *s)
 			{
-				i++;
+				s++;
 				j++;
 			}
 			arr[++a] = (char *) ft_calloc(j + 1, sizeof(char));
-			ft_strlcpy(arr[a], &s[i - j], j + 1);
+			ft_strlcpy(arr[a], s - j, j + 1);
 		}
 	}
 	return (arr);
@@ -54,19 +54,17 @@ char	**ft_split(char const	*s, char	c)
 
 static int	str_in_array(const char *s, char delimiter)
 {
-	unsigned int	i;
 	unsigned int	qnt;
 
-	i = 0;
 	qnt = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == delimiter)
-			i++;
+		if (*s == delimiter)
+			s++;
 		else
 		{
-			while (s[i] != delimiter && s[i])
-				i++;
+			while (*s != delimiter && *s)
+				s++;
 			qnt++;
 		}
 	}
