@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:38 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/07 11:52:59 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/12 14:37:11 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	*ft_memset(void	*s, int	c, size_t	n)
 		buff[i] = c;
 		i++;
 	}
-	return (s);
+	return (buff);
 }

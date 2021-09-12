@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 20:08:59 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/09 21:09:04 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/12 18:07:21 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstnew(void	*content)
 	t_list	*new;
 
 	new = malloc(sizeof(t_list));
-	if (!content)
+	if (!new)
 		return (NULL);
 	new -> content = content;
 	new -> next = NULL;

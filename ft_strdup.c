@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:48 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/08 17:41:21 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/12 18:39:02 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strdup(const char	*s)
 
 	s_len = ft_strlen(s) + 1;
 	p = (char *)ft_calloc(s_len, sizeof(char));
+	if (!p)
+		return (NULL);
 	pointer = p;
 	ft_strlcpy(p, s, s_len);
 	return (pointer);

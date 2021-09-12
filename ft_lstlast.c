@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 12:35:51 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/09 21:07:35 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/12 14:26:22 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@
 
 t_list	*ft_lstlast(t_list	*lst)
 {
-	if (!lst)
+	t_list	*ptr;
+
+	ptr = lst;
+	if (!ptr)
 		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	while (ptr->next)
+		ptr = ptr->next;
+	return (ptr);
 }

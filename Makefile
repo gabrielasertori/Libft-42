@@ -6,7 +6,7 @@
 #    By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 11:37:22 by gcosta-d          #+#    #+#              #
-#    Updated: 2021/09/09 15:53:47 by gcosta-d         ###   ########.fr        #
+#    Updated: 2021/09/12 18:47:01 by gcosta-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,13 +28,13 @@ B_OBJ = $(BONUS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -rcs $(NAME) $(OBJ)
+	ar -rc $(NAME) $(OBJ)
 
 bonus: $(NAME) $(B_OBJ)
-	ar -rcs $(NAME) $(B_OBJ)
+	ar -rc $(NAME) $(B_OBJ)
 
 clean:
-	rm -f $(OBJ).o $(B_OBJ).o
+	rm -f $(OBJ) $(B_OBJ)
 
 fclean: clean
 	rm -f $(NAME)

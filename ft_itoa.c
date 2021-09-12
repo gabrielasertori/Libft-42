@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:00:55 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/11 20:41:03 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/12 14:20:59 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ char	*ft_itoa(int	n)
 {
 	char	*str;
 	int		n_len;
-	int		n1;
 
 	n_len = get_len(n);
 	str = (char *) ft_calloc(n_len + 1, sizeof(char));
