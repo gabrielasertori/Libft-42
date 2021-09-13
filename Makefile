@@ -6,14 +6,13 @@
 #    By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 11:37:22 by gcosta-d          #+#    #+#              #
-#    Updated: 2021/09/13 15:25:19 by gcosta-d         ###   ########.fr        #
+#    Updated: 2021/09/13 16:13:28 by gcosta-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = clang
 FLAGS = -Wall -Wextra -Werror
-MY_FLAGS = -g3 -Wunused-variable -fsanitize=address
 SOURCE = ft_isalnum.c ft_isprint.c ft_memcmp.c ft_putchar_fd.c ft_split.c \
 			ft_strlcat.c ft_strncmp.c ft_substr.c ft_atoi.c ft_isalpha.c \
 			ft_itoa.c ft_memcpy.c ft_putendl_fd.c ft_strchr.c ft_strlcpy.c \
@@ -23,8 +22,11 @@ SOURCE = ft_isalnum.c ft_isprint.c ft_memcmp.c ft_putchar_fd.c ft_split.c \
 			ft_putstr_fd.c ft_strjoin.c ft_strmapi.c ft_strtrim.c ft_striteri.c
 OBJ = $(SOURCE:.c=.o)
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstsize.c \
-			ft_lstlast.c ft_lstdelone.c
+			ft_lstlast.c
 B_OBJ = $(BONUS:.c=.o)
+
+%.o: %.c
+	$(CC) $(FLAGS) $(MY_FLAGS) -c $< -o $@
 
 all: $(NAME)
 
@@ -34,9 +36,6 @@ $(NAME): $(OBJ)
 bonus: $(NAME) $(B_OBJ)
 	ar -rc $(NAME) $(B_OBJ)
 
-%.o: %.c
-	$(CC) $(FLAGS) $(MY_FLAGS) -c $< -o $@
-
 clean:
 	rm -f $(OBJ) $(B_OBJ)
 
@@ -45,8 +44,8 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re main bonus my_bonus
+.PHONY: all clean fclean re main bonus
 
 main: main.c $(OBJ) $(NAME)
-	$(CC) -lbsd main.c $(NAME) -o main
+	$(CC) -lbsd $(FLAGS) main.c $(NAME) -o main
 	./main

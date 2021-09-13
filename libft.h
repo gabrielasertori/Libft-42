@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:32:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/13 15:22:49 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/09 12:36:21 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,5 @@ void	ft_lstadd_front(t_list	**lst, t_list	*new);
 void	ft_lstadd_back(t_list	**lst, t_list	*new);
 int		ft_lstsize(t_list	*lst);
 t_list	*ft_lstlast(t_list	*lst);
-void	ft_lstdelone(t_list	*lst, void	(*del)(void*));
 
 #endif
