@@ -6,11 +6,11 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:45 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/13 16:06:11 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:54:37 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 /* Substr return a pointer to a copy string from the big string
  * len bytes and counting with the start index.
@@ -20,7 +20,7 @@
  * all content of the source string.
  */
 
-char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t			s_len;
 	char			*copy;

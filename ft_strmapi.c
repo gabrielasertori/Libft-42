@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:17 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/11 20:41:34 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:18:04 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* This function applies a callback function while iterating the string */
 
-char	*ft_strmapi(char const	*s, char	(*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	char			*str;

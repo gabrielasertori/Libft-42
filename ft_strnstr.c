@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:36:12 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/08 18:00:44 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:18:14 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
  * or until little string fits into the last bytes of big string.
  */
 
-char	*ft_strnstr(const char	*s1, const char	*s2, size_t	n)
+char	*ft_strnstr(const char *s1, const char *s2, size_t	n)
 {
 	size_t	i;
 	size_t	j;

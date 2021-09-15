@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:27 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/08 15:51:06 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:14:49 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  *	to the destinated area.
  */
 
-void	*ft_memcpy(void	*dest, const void	*src, size_t	n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 	char	*buff_dest;

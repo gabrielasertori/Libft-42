@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:02:42 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/11 20:16:04 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:17:18 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 static int	str_in_array(const char *s, char delimiter);
 
-char	**ft_split(char const	*s, char	c)
+char	**ft_split(char const *s, char c)
 {
 	char			**arr;
 	unsigned int	j;

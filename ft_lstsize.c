@@ -6,11 +6,11 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 12:22:18 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/11 21:34:46 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:53:48 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 /* This function return how many elements are linked.
  * While next point to an element, we passed to that element
@@ -18,7 +18,7 @@
  * to count at least one element.
  */
 
-int	ft_lstsize(t_list	*lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
 

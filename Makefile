@@ -6,7 +6,7 @@
 #    By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 11:37:22 by gcosta-d          #+#    #+#              #
-#    Updated: 2021/09/13 16:13:28 by gcosta-d         ###   ########.fr        #
+#    Updated: 2021/09/14 17:47:30 by gcosta-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,18 +22,18 @@ SOURCE = ft_isalnum.c ft_isprint.c ft_memcmp.c ft_putchar_fd.c ft_split.c \
 			ft_putstr_fd.c ft_strjoin.c ft_strmapi.c ft_strtrim.c ft_striteri.c
 OBJ = $(SOURCE:.c=.o)
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstsize.c \
-			ft_lstlast.c
+			ft_lstlast.c ft_lstdelone.c ft_lstclear.c
 B_OBJ = $(BONUS:.c=.o)
 
 %.o: %.c
-	$(CC) $(FLAGS) $(MY_FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar -rc $(NAME) $(OBJ)
 
-bonus: $(NAME) $(B_OBJ)
+bonus: $(B_OBJ)
 	ar -rc $(NAME) $(B_OBJ)
 
 clean:

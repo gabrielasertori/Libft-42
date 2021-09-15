@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:06 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/08 17:46:08 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:17:45 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  * to the new string.
  */
 
-char	*ft_strjoin(char const	*s1, char const	*s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -27,9 +27,9 @@ char	*ft_strjoin(char const	*s1, char const	*s2)
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	s3 = malloc(s1_len + s2_len + 1);
-	i = 0;
 	if (!s3)
 		return (NULL);
+	i = 0;
 	while (s1[i] != 0)
 	{
 		s3[i] = s1[i];

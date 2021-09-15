@@ -6,11 +6,11 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:36:25 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/23 19:59:41 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:18:58 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int	c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);

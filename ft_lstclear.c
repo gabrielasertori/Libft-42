@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/25 15:01:43 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/14 10:15:58 by gcosta-d         ###   ########.fr       */
+/*   Created: 2021/09/14 11:01:03 by gcosta-d          #+#    #+#             */
+/*   Updated: 2021/09/14 12:28:06 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putendl_fd(char *s, int fd)
+/* Deletes and frees the given element and every successor
+ * of that element, using the function ’del’ and free(3).
+ * Finally, the pointer to the list must be set to NULL.
+ */
+
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	while (*s != 0)
+	t_list	*ptr;
+
+	ptr = *lst;
+	while (ptr)
 	{
-		write (fd, s, 1);
-		s++;
+		ptr = ptr->next;
+		if ((*lst)->next != NULL)
+			(*lst)->next = NULL;
+		ft_lstdelone(*lst, del);
+		*lst = ptr;
 	}
-	write (fd, "\n", 1);
+	free(ptr);
 }

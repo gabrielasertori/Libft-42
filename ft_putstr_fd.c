@@ -6,14 +6,14 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:02:26 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/06 01:41:25 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:54:09 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
-#include	<unistd.h>
+#include "libft.h"
+#include <unistd.h>
 
-void	ft_putstr_fd(char	*s, int	fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s != 0)
 	{

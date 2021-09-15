@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:38 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/12 14:37:11 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:15:17 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  *	a pointer to the first memory area passed.
  */
 
-void	*ft_memset(void	*s, int	c, size_t	n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
 	char	*buff;

@@ -6,14 +6,14 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:03:31 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/08 18:52:09 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:18:39 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	find_first_pattern(char const	*string, char const *pattern);
-static int	find_last_pattern(char const	*str, char const	*pattern);
+static int	find_first_pattern(char const *string, char const *pattern);
+static int	find_last_pattern(char const *str, char const *pattern);
 
 /* This function cut the first and the last bytes of a string
  * that have the given pattern.
@@ -21,7 +21,7 @@ static int	find_last_pattern(char const	*str, char const	*pattern);
  * index of s1 with each index of pattern.
  */
 
-char	*ft_strtrim(char const	*s1, char const	*set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	unsigned int	first_s1;
 	unsigned int	last_s1;

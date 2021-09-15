@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:23 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/13 16:09:52 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:13:03 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  *	is encountered.
  */
 
-int	ft_memcmp(const void	*s1, const void	*s2, size_t	n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*buff_s1;
 	unsigned char	*buff_s2;

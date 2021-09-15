@@ -6,11 +6,11 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 22:25:23 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/13 16:18:56 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 11:49:35 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 /* Add a new element at the end of the given linked list.
  * First, we need to declare a pointer that keeps the address
@@ -19,7 +19,7 @@
  * last next, it change the next from NULL to new.
  */
 
-void	ft_lstadd_back(t_list	**lst, t_list	*new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;
 

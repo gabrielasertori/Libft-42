@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:00:55 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/12 14:20:59 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:19:30 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
  *	the amount of algarisms in n to allocate memory.
  */
 
-static int	get_len(int	nbr);
-static char	*get_digit(int	n, int	n_len, char	*str);
+static int	get_len(int nbr);
+static char	*get_digit(int n, int n_len, char *str);
 
-char	*ft_itoa(int	n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		n_len;
@@ -46,7 +46,7 @@ char	*ft_itoa(int	n)
 	return (str);
 }
 
-static int	get_len(int	nbr)
+static int	get_len(int nbr)
 {
 	int	nbr_len;
 
@@ -61,7 +61,7 @@ static int	get_len(int	nbr)
 	return (nbr_len);
 }
 
-static char	*get_digit(int	n, int	n_len, char	*str)
+static char	*get_digit(int n, int n_len, char *str)
 {
 	int	n1;
 

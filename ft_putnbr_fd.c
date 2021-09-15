@@ -6,11 +6,11 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:02:06 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/08 17:39:50 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:16:55 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 /*	Putnbr writes the integer passed and have no return value.
  *	This is a recursive function. That means that many putnbr
@@ -19,7 +19,7 @@
  *	finish will continue untill the first one.
  */
 
-void	ft_putnbr_fd(int	n, int	fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 		write (fd, "-2147483648", 11);

@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:35:18 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/07 11:53:09 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:02:54 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
  *	type to make comparissons.
  */
 
-void	*ft_memchr(const void	*s, int	c, size_t	n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*buff;
 	unsigned char	buff_c;

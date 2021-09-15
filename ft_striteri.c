@@ -6,17 +6,17 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:02:52 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/08 17:42:56 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:54:20 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 /* This function iterate the string and applies the callback
  * function in every index of the string.
  */
 
-void	ft_striteri(char	*s, void	(*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 

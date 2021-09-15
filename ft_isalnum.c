@@ -6,13 +6,13 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:34:44 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/08/29 19:05:20 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 10:01:36 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int	c)
+int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }
