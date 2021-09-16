@@ -36,7 +36,7 @@ it every time when compiling).
 NAME: libft.a
 ```
 
-2.	(optional) if you want, then you may declare variables for the compiler and
+2.	Then you may declare variables for the compiler and
 for the flags.
 ```Makefile
 CC: clang
@@ -63,6 +63,15 @@ in the previous declaration into .o files. Tadaa! You just created object files.
 ```Makefile
 OBJ: $(MANDATORY:.c=.o)
 ```
+
+5.	Let's compile with our flags. Every time that we call `.c=.o` our makefile
+must compile the .c with the specified flags and output a .o file, like this:
+```Makefile
+%.o: %.c
+	clang -Wall -Werror -Wextra -c $< -o $@
+```
+`$<` refers to every .c file and `$@` to .o files that is compiling.
+
 
 
 ### Rules
@@ -97,6 +106,10 @@ main: main.c $(NAME)
 
 10.	The above code are compiling the main.c file with your library and output
 this in an executable named main, and then executing it.
+
+11. **Relink** When you do the command `make` the makefile must compile all
+your files and turn into your .a library. If you make any change in some files
+only them had to recompile when you do `make`, otherwise your code are relinking.
 
 ---
 
