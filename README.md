@@ -16,6 +16,7 @@
 
 # 42 Cursus - Libft
 :rocket: Our first library in c!
+<img src="screenrecorder.gif"/>
 
 
 ## Sumary
